@@ -40,7 +40,7 @@ MIXTAPES = {
 
     "mixtape1": [
         {
-            "file_id": "BAACAgEAAxkBAAMraoAFG61oAStiZOfWSa2IXY2G2zYAAisJAAKO9BlH71eGqGld_x89BA",
+            "file_id": "BAACAgIAAxkBAAMFan_t2UQxx8DpPNP0vJxG-AytMPcAAtebAAK19uBLnmb7w8N311Q9BA",
             "caption": "🎬 Vídeo 1 de 1"
         }
     ],
