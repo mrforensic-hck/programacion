@@ -14,11 +14,10 @@ from telegram.ext import (
 # CONFIGURACIÓN
 # ==========================================================
 
-TOKEN = "8654409228:AAFbp0ywyahBzC_OEFR7djyFiUETv_7LzwE"
+TOKEN = "PON_AQUI_TU_NUEVO_TOKEN"
 
-# Tu ID de Telegram.
-# Solo tú podrás utilizar la función para obtener file_id.
-ADMIN_ID = 8800247127
+# Tu ID de Telegram
+ADMIN_ID = 122323
 
 
 # ==========================================================
@@ -34,104 +33,166 @@ logging.basicConfig(
 # ==========================================================
 # CONTENIDO
 #
+# Cada día tiene su propio enlace.
+#
+# DÍA 1 → ?start=001
+# DÍA 2 → ?start=002
+# DÍA 3 → ?start=003
+# ...
+# DÍA 10 → ?start=010
+#
 # IMPORTANTE:
-# Cada día tiene un número diferente.
-#
-# DÍA 1 = 001
-# DÍA 2 = 002
-# DÍA 3 = 003
-#
-# NUNCA MODIFIQUES UN DÍA QUE YA PUBLICASTE.
+# Nunca cambies un día que ya hayas publicado.
 # ==========================================================
 
 CONTENIDO = {
 
-
     # ======================================================
     # DÍA 1
-    # Ejemplo: aquí puedes poner 16 vídeos
-    # Enlace:
     # https://t.me/snufy_bot?start=001
     # ======================================================
 
     "001": [
 
         {
-            "file_id": "BAACAgIAAxkBAAICGGqA0ixxrRuu27HoKhAe1c-R2HL0AAJBSgAC_jYxSaf8mghoKpnmPQQ",
+            "file_id": "BAACAgQAAxkBAAIB-2qAzGs34eetR-1gcZmwfLkdHoSLAAI9HgAClEKhUBlfnASsAXyHPQQ",
             "caption": "🎬 Vídeo 1"
-        },
-
-
-        # Puedes seguir agregando todos los vídeos que quieras.
-
+        }
 
     ],
 
 
     # ======================================================
     # DÍA 2
-    # Aquí tú decides cuántos vídeos poner.
-    #
-    # Enlace:
     # https://t.me/snufy_bot?start=002
     # ======================================================
 
     "002": [
 
         {
-            "file_id": "FILE_ID_VIDEO_1",
+            "file_id": "BAACAgEAAxkBAAMraoAFG61oAStiZOfWSa2IXY2G2zYAAisJAAKO9BlH71eGqGld_x89BA",
             "caption": "🎬 Vídeo 1"
-        },
-
-        {
-            "file_id": "FILE_ID_VIDEO_2",
-            "caption": "🎬 Vídeo 2"
-        },
-
-        {
-            "file_id": "FILE_ID_VIDEO_3",
-            "caption": "🎬 Vídeo 3"
         }
-
 
     ],
 
 
     # ======================================================
     # DÍA 3
-    # Aquí también puedes poner la cantidad que quieras.
-    #
-    # Enlace:
     # https://t.me/snufy_bot?start=003
     # ======================================================
 
     "003": [
 
         {
-            "file_id": "FILE_ID_VIDEO_1",
+            "file_id": "FILE_ID_AQUI",
             "caption": "🎬 Vídeo 1"
         }
-
 
     ],
 
 
     # ======================================================
     # DÍA 4
-    #
-    # Cuando llegue el día 4, agrega aquí los vídeos.
-    #
-    # Enlace:
     # https://t.me/snufy_bot?start=004
     # ======================================================
 
     "004": [
 
         {
-            "file_id": "FILE_ID_VIDEO_1",
+            "file_id": "FILE_ID_AQUI",
             "caption": "🎬 Vídeo 1"
         }
 
+    ],
+
+
+    # ======================================================
+    # DÍA 5
+    # https://t.me/snufy_bot?start=005
+    # ======================================================
+
+    "005": [
+
+        {
+            "file_id": "FILE_ID_AQUI",
+            "caption": "🎬 Vídeo 1"
+        }
+
+    ],
+
+
+    # ======================================================
+    # DÍA 6
+    # https://t.me/snufy_bot?start=006
+    # ======================================================
+
+    "006": [
+
+        {
+            "file_id": "FILE_ID_AQUI",
+            "caption": "🎬 Vídeo 1"
+        }
+
+    ],
+
+
+    # ======================================================
+    # DÍA 7
+    # https://t.me/snufy_bot?start=007
+    # ======================================================
+
+    "007": [
+
+        {
+            "file_id": "FILE_ID_AQUI",
+            "caption": "🎬 Vídeo 1"
+        }
+
+    ],
+
+
+    # ======================================================
+    # DÍA 8
+    # https://t.me/snufy_bot?start=008
+    # ======================================================
+
+    "008": [
+
+        {
+            "file_id": "FILE_ID_AQUI",
+            "caption": "🎬 Vídeo 1"
+        }
+
+    ],
+
+
+    # ======================================================
+    # DÍA 9
+    # https://t.me/snufy_bot?start=009
+    # ======================================================
+
+    "009": [
+
+        {
+            "file_id": "FILE_ID_AQUI",
+            "caption": "🎬 Vídeo 1"
+        }
+
+    ],
+
+
+    # ======================================================
+    # DÍA 10
+    # https://t.me/snufy_bot?start=010
+    # ======================================================
+
+    "010": [
+
+        {
+            "file_id": "FILE_ID_AQUI",
+            "caption": "🎬 Vídeo 1"
+        }
 
     ]
 
@@ -147,8 +208,6 @@ async def start(
     context: ContextTypes.DEFAULT_TYPE
 ):
 
-    # Comprobar si existe un código después de /start
-
     if not context.args:
 
         await update.message.reply_text(
@@ -160,12 +219,12 @@ async def start(
         return
 
 
-    # Obtener el código
+    # Obtener el código del enlace
 
     codigo = context.args[0].lower()
 
 
-    # Comprobar que el código existe
+    # Comprobar si existe
 
     if codigo not in CONTENIDO:
 
@@ -177,7 +236,7 @@ async def start(
         return
 
 
-    # Obtener los vídeos de ese día
+    # Obtener los videos
 
     videos = CONTENIDO[codigo]
 
@@ -192,7 +251,7 @@ async def start(
     )
 
 
-    # Enviar todos los vídeos
+    # Enviar todos los videos del día
 
     for video in videos:
 
@@ -216,7 +275,7 @@ async def start(
 
 
 # ==========================================================
-# OBTENER FILE_ID DE UN VIDEO
+# OBTENER FILE_ID
 # ==========================================================
 
 async def recibir_video(
@@ -224,20 +283,16 @@ async def recibir_video(
     context: ContextTypes.DEFAULT_TYPE
 ):
 
-    # Solo el administrador puede usar esta función
+    # Solo el administrador puede obtener file_id
 
     if update.effective_user.id != ADMIN_ID:
         return
 
 
-    # Obtener información del vídeo
-
     video = update.message.video
 
     file_id = video.file_id
 
-
-    # Mostrar file_id
 
     await update.message.reply_text(
         "🎬 FILE ID OBTENIDO\n\n"
@@ -279,21 +334,21 @@ if __name__ == "__main__":
     app = ApplicationBuilder().token(TOKEN).build()
 
 
-    # Comando /start
+    # /start
 
     app.add_handler(
         CommandHandler("start", start)
     )
 
 
-    # Comando /id
+    # /id
 
     app.add_handler(
         CommandHandler("id", id_usuario)
     )
 
 
-    # Detectar vídeos enviados al bot
+    # Recibir videos y obtener file_id
 
     app.add_handler(
         MessageHandler(
