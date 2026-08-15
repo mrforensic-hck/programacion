@@ -10,21 +10,20 @@ from telegram.ext import (
 )
 
 
-# ============================================================
+# ==========================================================
 # CONFIGURACIÓN
-# ============================================================
+# ==========================================================
 
 TOKEN = "8654409228:AAFbp0ywyahBzC_OEFR7djyFiUETv_7LzwE"
 
 # Tu ID de Telegram.
-# Lo puedes obtener temporalmente con un bot como @userinfobot.
-# Pon aquí solamente TU ID para que nadie más pueda obtener file_id.
+# Solo tú podrás utilizar la función para obtener file_id.
 ADMIN_ID = 8800247127
 
 
-# ============================================================
+# ==========================================================
 # LOGS
-# ============================================================
+# ==========================================================
 
 logging.basicConfig(
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
@@ -32,296 +31,170 @@ logging.basicConfig(
 )
 
 
-# ============================================================
-# MIXTAPES
-# ============================================================
+# ==========================================================
+# CONTENIDO
+#
+# IMPORTANTE:
+# Cada día tiene un número diferente.
+#
+# DÍA 1 = 001
+# DÍA 2 = 002
+# DÍA 3 = 003
+#
+# NUNCA MODIFIQUES UN DÍA QUE YA PUBLICASTE.
+# ==========================================================
 
-MIXTAPES = {
+CONTENIDO = {
 
-    "mixtape1": [
+
+    # ======================================================
+    # DÍA 1
+    # Ejemplo: aquí puedes poner 16 vídeos
+    # Enlace:
+    # https://t.me/snufy_bot?start=001
+    # ======================================================
+
+    "001": [
+
         {
-            "file_id": "BAACAgIAAxkBAAMFan_t2UQxx8DpPNP0vJxG-AytMPcAAtebAAK19uBLnmb7w8N311Q9BA",
-            "caption": "🎬 Vídeo 1 de 1"
-        }
+            "file_id": "BAACAgQAAxkBAAIB-2qAzGs34eetR-1gcZmwfLkdHoSLAAI9HgAClEKhUBlfnASsAXyHPQQ",
+            "caption": "🎬 Vídeo 1"
+        },
+
+
+        # Puedes seguir agregando todos los vídeos que quieras.
+
+
     ],
 
-    "mixtape2": [
+
+    # ======================================================
+    # DÍA 2
+    # Aquí tú decides cuántos vídeos poner.
+    #
+    # Enlace:
+    # https://t.me/snufy_bot?start=002
+    # ======================================================
+
+    "002": [
+
         {
-            "file_id": "FILE_ID_1",
-            "caption": "🎬 Vídeo 1 de 2"
+            "file_id": "FILE_ID_VIDEO_1",
+            "caption": "🎬 Vídeo 1"
         },
+
         {
-            "file_id": "FILE_ID_2",
-            "caption": "🎬 Vídeo 2 de 2"
+            "file_id": "FILE_ID_VIDEO_2",
+            "caption": "🎬 Vídeo 2"
+        },
+
+        {
+            "file_id": "FILE_ID_VIDEO_3",
+            "caption": "🎬 Vídeo 3"
         }
+
+
     ],
 
-    "mixtape3": [
+
+    # ======================================================
+    # DÍA 3
+    # Aquí también puedes poner la cantidad que quieras.
+    #
+    # Enlace:
+    # https://t.me/snufy_bot?start=003
+    # ======================================================
+
+    "003": [
+
         {
-            "file_id": "FILE_ID_1",
-            "caption": "🎬 Vídeo 1 de 3"
-        },
-        {
-            "file_id": "FILE_ID_2",
-            "caption": "🎬 Vídeo 2 de 3"
-        },
-        {
-            "file_id": "FILE_ID_3",
-            "caption": "🎬 Vídeo 3 de 3"
+            "file_id": "FILE_ID_VIDEO_1",
+            "caption": "🎬 Vídeo 1"
         }
+
+
     ],
 
-    "mixtape4": [
-        {
-            "file_id": "FILE_ID_1",
-            "caption": "🎬 Vídeo 1 de 4"
-        },
-        {
-            "file_id": "FILE_ID_2",
-            "caption": "🎬 Vídeo 2 de 4"
-        },
-        {
-            "file_id": "FILE_ID_3",
-            "caption": "🎬 Vídeo 3 de 4"
-        },
-        {
-            "file_id": "FILE_ID_4",
-            "caption": "🎬 Vídeo 4 de 4"
-        }
-    ],
 
-    "mixtape5": [
-        {
-            "file_id": "FILE_ID_1",
-            "caption": "🎬 Vídeo 1 de 5"
-        },
-        {
-            "file_id": "FILE_ID_2",
-            "caption": "🎬 Vídeo 2 de 5"
-        },
-        {
-            "file_id": "FILE_ID_3",
-            "caption": "🎬 Vídeo 3 de 5"
-        },
-        {
-            "file_id": "FILE_ID_4",
-            "caption": "🎬 Vídeo 4 de 5"
-        },
-        {
-            "file_id": "FILE_ID_5",
-            "caption": "🎬 Vídeo 5 de 5"
-        }
-    ],
+    # ======================================================
+    # DÍA 4
+    #
+    # Cuando llegue el día 4, agrega aquí los vídeos.
+    #
+    # Enlace:
+    # https://t.me/snufy_bot?start=004
+    # ======================================================
 
-    "mixtape6": [
-        {
-            "file_id": "FILE_ID_1",
-            "caption": "🎬 Vídeo 1 de 6"
-        },
-        {
-            "file_id": "FILE_ID_2",
-            "caption": "🎬 Vídeo 2 de 6"
-        },
-        {
-            "file_id": "FILE_ID_3",
-            "caption": "🎬 Vídeo 3 de 6"
-        },
-        {
-            "file_id": "FILE_ID_4",
-            "caption": "🎬 Vídeo 4 de 6"
-        },
-        {
-            "file_id": "FILE_ID_5",
-            "caption": "🎬 Vídeo 5 de 6"
-        },
-        {
-            "file_id": "FILE_ID_6",
-            "caption": "🎬 Vídeo 6 de 6"
-        }
-    ],
+    "004": [
 
-    "mixtape7": [
         {
-            "file_id": "FILE_ID_1",
-            "caption": "🎬 Vídeo 1 de 7"
-        },
-        {
-            "file_id": "FILE_ID_2",
-            "caption": "🎬 Vídeo 2 de 7"
-        },
-        {
-            "file_id": "FILE_ID_3",
-            "caption": "🎬 Vídeo 3 de 7"
-        },
-        {
-            "file_id": "FILE_ID_4",
-            "caption": "🎬 Vídeo 4 de 7"
-        },
-        {
-            "file_id": "FILE_ID_5",
-            "caption": "🎬 Vídeo 5 de 7"
-        },
-        {
-            "file_id": "FILE_ID_6",
-            "caption": "🎬 Vídeo 6 de 7"
-        },
-        {
-            "file_id": "FILE_ID_7",
-            "caption": "🎬 Vídeo 7 de 7"
+            "file_id": "FILE_ID_VIDEO_1",
+            "caption": "🎬 Vídeo 1"
         }
-    ],
 
-    "mixtape8": [
-        {
-            "file_id": "FILE_ID_1",
-            "caption": "🎬 Vídeo 1 de 8"
-        },
-        {
-            "file_id": "FILE_ID_2",
-            "caption": "🎬 Vídeo 2 de 8"
-        },
-        {
-            "file_id": "FILE_ID_3",
-            "caption": "🎬 Vídeo 3 de 8"
-        },
-        {
-            "file_id": "FILE_ID_4",
-            "caption": "🎬 Vídeo 4 de 8"
-        },
-        {
-            "file_id": "FILE_ID_5",
-            "caption": "🎬 Vídeo 5 de 8"
-        },
-        {
-            "file_id": "FILE_ID_6",
-            "caption": "🎬 Vídeo 6 de 8"
-        },
-        {
-            "file_id": "FILE_ID_7",
-            "caption": "🎬 Vídeo 7 de 8"
-        },
-        {
-            "file_id": "FILE_ID_8",
-            "caption": "🎬 Vídeo 8 de 8"
-        }
-    ],
 
-    "mixtape9": [
-        {
-            "file_id": "FILE_ID_1",
-            "caption": "🎬 Vídeo 1 de 9"
-        },
-        {
-            "file_id": "FILE_ID_2",
-            "caption": "🎬 Vídeo 2 de 9"
-        },
-        {
-            "file_id": "FILE_ID_3",
-            "caption": "🎬 Vídeo 3 de 9"
-        },
-        {
-            "file_id": "FILE_ID_4",
-            "caption": "🎬 Vídeo 4 de 9"
-        },
-        {
-            "file_id": "FILE_ID_5",
-            "caption": "🎬 Vídeo 5 de 9"
-        },
-        {
-            "file_id": "FILE_ID_6",
-            "caption": "🎬 Vídeo 6 de 9"
-        },
-        {
-            "file_id": "FILE_ID_7",
-            "caption": "🎬 Vídeo 7 de 9"
-        },
-        {
-            "file_id": "FILE_ID_8",
-            "caption": "🎬 Vídeo 8 de 9"
-        },
-        {
-            "file_id": "FILE_ID_9",
-            "caption": "🎬 Vídeo 9 de 9"
-        }
-    ],
-
-    "mixtape10": [
-        {
-            "file_id": "FILE_ID_1",
-            "caption": "🎬 Vídeo 1 de 10"
-        },
-        {
-            "file_id": "FILE_ID_2",
-            "caption": "🎬 Vídeo 2 de 10"
-        },
-        {
-            "file_id": "FILE_ID_3",
-            "caption": "🎬 Vídeo 3 de 10"
-        },
-        {
-            "file_id": "FILE_ID_4",
-            "caption": "🎬 Vídeo 4 de 10"
-        },
-        {
-            "file_id": "FILE_ID_5",
-            "caption": "🎬 Vídeo 5 de 10"
-        },
-        {
-            "file_id": "FILE_ID_6",
-            "caption": "🎬 Vídeo 6 de 10"
-        },
-        {
-            "file_id": "FILE_ID_7",
-            "caption": "🎬 Vídeo 7 de 10"
-        },
-        {
-            "file_id": "FILE_ID_8",
-            "caption": "🎬 Vídeo 8 de 10"
-        },
-        {
-            "file_id": "FILE_ID_9",
-            "caption": "🎬 Vídeo 9 de 10"
-        },
-        {
-            "file_id": "FILE_ID_10",
-            "caption": "🎬 Vídeo 10 de 10"
-        }
     ]
+
 }
 
 
-# ============================================================
+# ==========================================================
 # COMANDO /START
-# ============================================================
+# ==========================================================
 
-async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
+async def start(
+    update: Update,
+    context: ContextTypes.DEFAULT_TYPE
+):
 
-    args = context.args
+    # Comprobar si existe un código después de /start
 
-    if not args:
+    if not context.args:
+
         await update.message.reply_text(
             "👋 ¡Hola!\n\n"
-            "Para recibir contenido, utiliza uno de los enlaces "
-            "proporcionados por nuestro canal."
+            "Para recibir el contenido, utiliza uno de "
+            "los enlaces publicados en nuestro canal."
         )
+
         return
 
-    clave = args[0].lower()
 
-    if clave not in MIXTAPES:
+    # Obtener el código
+
+    codigo = context.args[0].lower()
+
+
+    # Comprobar que el código existe
+
+    if codigo not in CONTENIDO:
+
         await update.message.reply_text(
-            "⚠️ El enlace utilizado no es válido o ha caducado."
+            "⚠️ El enlace utilizado no es válido "
+            "o ha caducado."
         )
+
         return
 
-    lista_videos = MIXTAPES[clave]
+
+    # Obtener los vídeos de ese día
+
+    videos = CONTENIDO[codigo]
+
+    total = len(videos)
+
+
+    # Avisar al usuario
 
     await update.message.reply_text(
-        f"🎬 ¡Hola!\n\n"
-        f"Te estoy enviando {len(lista_videos)} vídeo(s)..."
+        f"🎁 ¡Regalo encontrado!\n\n"
+        f"🎬 Te estoy enviando {total} vídeo(s)..."
     )
 
-    for video in lista_videos:
+
+    # Enviar todos los vídeos
+
+    for video in videos:
 
         try:
 
@@ -342,36 +215,50 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
             )
 
 
-# ============================================================
-# OBTENER FILE_ID
-# ============================================================
+# ==========================================================
+# OBTENER FILE_ID DE UN VIDEO
+# ==========================================================
 
-async def recibir_video(update: Update, context: ContextTypes.DEFAULT_TYPE):
+async def recibir_video(
+    update: Update,
+    context: ContextTypes.DEFAULT_TYPE
+):
 
-    # Solo el administrador puede utilizar esta función
+    # Solo el administrador puede usar esta función
+
     if update.effective_user.id != ADMIN_ID:
         return
+
+
+    # Obtener información del vídeo
 
     video = update.message.video
 
     file_id = video.file_id
 
+
+    # Mostrar file_id
+
     await update.message.reply_text(
         "🎬 FILE ID OBTENIDO\n\n"
         f"{file_id}\n\n"
-        "📌 Copia este ID y colócalo en MIXTAPES."
+        "📌 Copia este ID y colócalo en el día correspondiente."
     )
+
 
     logging.info(
         f"Nuevo file_id obtenido: {file_id}"
     )
 
 
-# ============================================================
+# ==========================================================
 # COMANDO /ID
-# ============================================================
+# ==========================================================
 
-async def id_usuario(update: Update, context: ContextTypes.DEFAULT_TYPE):
+async def id_usuario(
+    update: Update,
+    context: ContextTypes.DEFAULT_TYPE
+):
 
     await update.message.reply_text(
         f"🆔 Tu ID de Telegram es:\n\n"
@@ -379,25 +266,34 @@ async def id_usuario(update: Update, context: ContextTypes.DEFAULT_TYPE):
     )
 
 
-# ============================================================
+# ==========================================================
 # INICIAR BOT
-# ============================================================
+# ==========================================================
 
 if __name__ == "__main__":
 
     print("======================================")
-    print("BOT MIXTAPES - VERSION 2.0")
+    print("BOT DE REGALOS - VERSION 4.0")
     print("======================================")
 
     app = ApplicationBuilder().token(TOKEN).build()
+
+
+    # Comando /start
 
     app.add_handler(
         CommandHandler("start", start)
     )
 
+
+    # Comando /id
+
     app.add_handler(
         CommandHandler("id", id_usuario)
     )
+
+
+    # Detectar vídeos enviados al bot
 
     app.add_handler(
         MessageHandler(
@@ -405,6 +301,7 @@ if __name__ == "__main__":
             recibir_video
         )
     )
+
 
     print("Bot iniciado correctamente.")
 
