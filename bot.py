@@ -14,10 +14,10 @@ from telegram.ext import (
 # CONFIGURACIÓN
 # ==========================================================
 
-TOKEN = "PON_AQUI_TU_NUEVO_TOKEN"
+TOKEN = "8654409228:AAFbp0ywyahBzC_OEFR7djyFiUETv_7LzwE"
 
 # Tu ID de Telegram
-ADMIN_ID = 122323
+ADMIN_ID = 8800247127
 
 
 # ==========================================================
