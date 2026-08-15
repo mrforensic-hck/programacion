@@ -15,7 +15,7 @@ TOKEN = "8654409228:AAFbp0ywyahBzC_OEFR7djyFiUETv_7LzwE"
 MIXTAPES = {
     # Para enlace: https://t.me/TuBotUsername?start=mixtape1
     "mixtape1": [
-        {"file_id": "BAACAgIAAxkBAAIBfGqAvRvIVO0UUc9F3bmBQySA6HdfAAJeVgAC8mnRSNwcxf125OSoPQQ", "caption": "🎬 Vídeo 1 de 1"}
+        {"file_id": "BAACAgIAAxkBAAIBfGqAvRvIVO0UUc9F3bmBQySA6HdfAAJeVgAC8mnRSNwcxf1", "caption": "🎬 Vídeo 1 de 1"}
     ],
 
     # Para enlace: https://t.me/TuBotUsername?start=mixtape2
